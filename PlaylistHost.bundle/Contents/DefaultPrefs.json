@@ -1,0 +1,14 @@
+[
+    {
+        "id": "plexip",
+        "label": "Plex IP",
+        "type": "text",
+        "default": "localhost"
+    },
+    {
+        "id": "plexport",
+        "label": "Plex port",
+        "type": "text",
+        "default": "32400"
+    }
+]
