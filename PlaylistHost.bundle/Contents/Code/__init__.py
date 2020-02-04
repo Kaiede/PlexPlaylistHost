@@ -105,12 +105,11 @@ def CreatePlaylistObject(playlist):
 
     callbackObject = Callback(PlaylistMenu, title=title, key=key)
 
-    directoryObject = PopupDirectoryObject(key=callbackObject, title=title)
-    directoryObject.duration = playlist.get(ATTR_DURATION)
+    directoryObject = DirectoryObject(key=callbackObject, title=title)
+    directoryObject.duration = attributeAsInt(playlist.get(ATTR_DURATION))
     directoryObject.summary = playlist.get(ATTR_SUMMARY)
     if playlist.get(ATTR_COMPOSITE) != None:
         directoryObject.thumb = playlist.get(ATTR_COMPOSITE)
-    directoryObject.thumb = R(ICON)
 
     return directoryObject
 
@@ -171,6 +170,8 @@ def FetchPlaylists():
     Log.Debug(el)
     playlist_xpath = '%s[@playlistType="audio"]' % PMS_XPATH_PLAYLIST
     playlistXml = el.xpath(playlist_xpath)
+
+    playlistXml.sort(key=lambda x: x.get(ATTR_TITLE), reverse=False)
 
     return playlistXml
 
