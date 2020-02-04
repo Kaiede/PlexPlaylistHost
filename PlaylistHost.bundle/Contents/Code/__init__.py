@@ -64,7 +64,6 @@ def Start():
     ObjectContainer.title1 = L(TEXT_MAIN_MENU)
     ObjectContainer.view_group = 'List'
     ObjectContainer.art = R(ART)
-    ObjectContainer.thumb = R(ICON)
 
     DirectoryObject.thumb = R(ICON)
     DirectoryObject.art = R(ART)    
