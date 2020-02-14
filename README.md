@@ -4,6 +4,8 @@ This was built to work around a limitation of PLEX where it doesn't make Music p
 
 It creates a new channel that simply passes along everything it finds in the server's Playlists. It will filter playlists to just audio playlists, giving a clean list.
 
+Based off of: https://github.com/cp9999/MusicPlaylist.bundle
+
 ### Installation
 
 Copy the PlaylistHost.bundle to the Plex Media Server plugins folder for your installation. 

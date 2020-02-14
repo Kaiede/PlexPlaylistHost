@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# This is a stripped down, modified
+# This is heavily based/inspired by https://github.com/cp9999/MusicPlaylist.bundle
 
 import json
 import os
