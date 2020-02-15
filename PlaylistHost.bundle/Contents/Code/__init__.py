@@ -127,6 +127,8 @@ def CreateTrackObject(track):
     trackObject.album = track.get(ATTR_PARENT_TITLE)
     if track.get(ATTR_THUMB) != None:
         trackObject.thumb = track.get(ATTR_THUMB)
+    if track.get(ATTR_DURATION) != None:
+        trackObject.duration = attributeAsInt(track.get(ATTR_DURATION))
     
     # Media Object
     partKey = track.get(ATTR_PARTKEY)
