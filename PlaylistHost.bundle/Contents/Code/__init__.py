@@ -105,7 +105,7 @@ def CreatePlaylistObject(playlist):
 
     callbackObject = Callback(PlaylistMenu, title=title, key=key)
 
-    directoryObject = DirectoryObject(key=callbackObject, title=title)
+    directoryObject = PlaylistObject(key=callbackObject, title=title)
     directoryObject.duration = attributeAsInt(playlist.get(ATTR_DURATION))
     directoryObject.summary = playlist.get(ATTR_SUMMARY)
     if playlist.get(ATTR_COMPOSITE) != None:
