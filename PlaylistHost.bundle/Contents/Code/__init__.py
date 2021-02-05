@@ -22,6 +22,7 @@ CURRENT_VERSION_SINGLE = "2"
 # Preferences
 PREFS__PLEXIP = 'plexip'
 PREFS__PLEXPORT = 'plexport'
+PREFS__PLEXTOKEN = 'plextoken'
 
 # Client / User information
 CLIENT_UNKNOWN = 'Unknown'
@@ -160,6 +161,9 @@ def GetPlexUrl(suffix=None):
     plexUrl = 'http://%s:%s' %(Prefs[PREFS__PLEXIP], Prefs[PREFS__PLEXPORT])
     if suffix is not None:
         plexUrl += suffix
+
+        plexUrl += '?X-Plex-Token='
+        plexUrl += Prefs[PREFS__PLEXTOKEN]
     
     Log.Debug('Requesting Plex URL: %s' % (plexUrl))
     return plexUrl
