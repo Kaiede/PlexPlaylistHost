@@ -10,5 +10,11 @@
         "label": "Plex port",
         "type": "text",
         "default": "32400"
+    },
+    {
+        "id": "plextoken",
+        "label": "Plex login token",
+        "type": "text",
+        "default": "my-token-here-that-I-found-from-viewing-xml-on-an-entity"
     }
 ]
