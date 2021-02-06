@@ -30,7 +30,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 * Allow HTTPS connections to PLEX, if possible.
 * Allow Renaming of channel to something other than "Playlists", if possible.
-* Provide non-placeholder images for resources.
+* ~~Provide non-placeholder images for resources.~~
 
 ## Authors
 
