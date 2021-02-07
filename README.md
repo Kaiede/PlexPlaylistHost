@@ -14,12 +14,13 @@ See this link for further details: https://support.plex.tv/articles/201187656-ho
 
 ## Configuration
 
-Right now there's just two settings:
+Right now there's just three settings:
 
 * IP Address of the Plex Server
 * Port of the Plex Server
+* Plex token to connect to the Plex Server
 
-These are both set to sane defaults which should work in most cases.
+The first two are both set to sane defaults which should work in most cases. The [Plex token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) needs to be found for each particular account (only once) and entered in the plugins settings.
 
 ## Contributing
 
@@ -29,7 +30,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 * Allow HTTPS connections to PLEX, if possible.
 * Allow Renaming of channel to something other than "Playlists", if possible.
-* Provide non-placeholder images for resources.
+* ~~Provide non-placeholder images for resources.~~
 
 ## Authors
 
@@ -40,3 +41,5 @@ See also the list of [contributors](https://github.com/Kaiede/PlaylistHost/contr
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com/)
