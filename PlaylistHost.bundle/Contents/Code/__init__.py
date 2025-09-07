@@ -32,6 +32,7 @@ DICT_KEY_CLIENT_LIST = CLIENT_USER_LIST
 # Plex XML Parsing
 PMS_XPATH_PLAYLIST = '//Playlist'
 PMS_XPATH_TRACK = '//Track'
+PMS_SUBELEMENT_TRACK_MEDIA = 'Media'
 
 # XML Attribute names
 ATTR_TITLE = 'title'
@@ -139,8 +140,15 @@ def CreateTrackObject(track):
     mediaObject.audio_channels = attributeAsInt(track.get(ATTR_AUDIOCHANNELS))
     if track.get(ATTR_AUDIOCODEC) != None:
         mediaObject.audio_codec = track.get(ATTR_AUDIOCODEC)
-    if track.get(ATTR_CONTAINER) != None:
-        mediaObject.container = track.get(ATTR_CONTAINER)           
+
+    container = track.get(ATTR_CONTAINER)
+    if container is None:
+        media = track.find(PMS_SUBELEMENT_TRACK_MEDIA)
+        if media is not None:
+            container = media.get(ATTR_CONTAINER)
+    if container is not None:
+        mediaObject.container = container
+
     trackObject.add(mediaObject)
     
     return trackObject
